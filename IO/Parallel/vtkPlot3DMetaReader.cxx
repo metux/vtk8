@@ -28,7 +28,7 @@
 #include <vector>
 #include <string>
 
-#include "vtk_jsoncpp.h"
+#include <jsoncpp/json/json.h>
 
 #define CALL_MEMBER_FN(object,ptrToMember)  ((object).*(ptrToMember))
 

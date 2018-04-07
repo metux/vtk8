@@ -10,5 +10,4 @@ vtk_module(vtkIOGeoJSON
   PRIVATE_DEPENDS
     vtkCommonCore
     vtkFiltersCore
-    vtkjsoncpp
   )

@@ -5,7 +5,6 @@
   * [diy2](diy2/update.sh)
   * [hyperlink](hyperlink/update.sh)
   * [incremental](incremental/update.sh)
-  * [jsoncpp](jsoncpp/update.sh)
   * [kwiml](../Utilities/KWIML/update.sh)
   * [kwsys](../Utilities/KWSys/update.sh)
   * [libharu](libharu/update.sh)

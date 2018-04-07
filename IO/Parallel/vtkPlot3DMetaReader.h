@@ -81,7 +81,7 @@
 #include "vtkIOParallelModule.h" // For export macro
 #include "vtkMultiBlockDataSetAlgorithm.h"
 
-#include "vtk_jsoncpp_fwd.h" // For forward declarations
+#include <jsoncpp/json/forwards.h>
 
 struct vtkPlot3DMetaReaderInternals;
 

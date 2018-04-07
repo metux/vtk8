@@ -39,6 +39,5 @@ vtk_module(vtkRenderingOSPRay
     vtkIOImage
     vtkIOLegacy
     vtkIOXML
-    vtkjsoncpp
     vtksys
   )

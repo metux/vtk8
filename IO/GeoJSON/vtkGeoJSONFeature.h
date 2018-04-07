@@ -26,7 +26,8 @@
 // VTK Includes
 #include "vtkIOGeoJSONModule.h" // For export macro
 #include "vtkDataObject.h"
-#include "vtk_jsoncpp.h" // For json parser
+
+#include <jsoncpp/json/json.h>
 
 class vtkPolyData;
 

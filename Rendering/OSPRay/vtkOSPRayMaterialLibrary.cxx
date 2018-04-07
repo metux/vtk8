@@ -24,7 +24,7 @@
 #include "vtkTexture.h"
 #include "vtkXMLImageDataReader.h"
 #include "vtkXMLImageDataWriter.h"
-#include "vtk_jsoncpp.h"
+#include <jsconcpp/json/json.h>
 #include <vtksys/SystemTools.hxx>
 
 #include <fstream>
