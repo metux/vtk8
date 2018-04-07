@@ -26,7 +26,7 @@
 #define H5FDdsm_H
 #include "XdmfDsmBuffer.h"
 
-#include "vtk_hdf5.h"
+#include <hdf5.h>
 
 #include "XdmfExport.h"
 

@@ -416,6 +416,7 @@ pkg_check_modules(EXPAT REQUIRED expat)
 pkg_check_modules(LIBXML2 REQUIRED libxml-2.0)
 pkg_check_modules(OGGTHEORA REQUIRED ogg theora)
 pkg_check_modules(LIBPROJ4 REQUIRED proj>=4.0)
+include(FindHDF5)
 
 #-----------------------------------------------------------------------------
 # Configure files with settings for use by the build.

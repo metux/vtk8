@@ -25,14 +25,10 @@ if(NOT BUILD_SHARED_LIBS)
 endif()
 
 #HDF5
-if (XDMF_BUILT_INVTK)
-  set(XDMF_HDF5_LIBRARIES ${vtkhdf5_LIBRARIES})
-  set(XDMF_HDF5_INCLUDE_DIRS ${vtkhdf5_INCLUDE_DIRS})
-else()
   find_package(HDF5 REQUIRED)
   set(XDMF_HDF5_LIBRARIES ${HDF5_LIBRARIES})
   set(XDMF_HDF5_INCLUDE_DIRS ${HDF5_INCLUDE_DIRS})
-endif()
+
 if(EXISTS "${HDF5_CONFIG}")
   include("${HDF5_CONFIG}")
   add_definitions(${HDF5_EXTRA_FLAGS})

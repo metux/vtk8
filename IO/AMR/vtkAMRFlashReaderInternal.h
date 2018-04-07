@@ -41,7 +41,7 @@
 #include "vtkByteSwap.h"
 
 #define H5_USE_16_API
-#include "vtk_hdf5.h"
+#include <hdf5.h>
 
 //==============================================================================
 //            I N T E R N A L   F L A S H     R E A D E R

@@ -27,7 +27,7 @@
 
 #ifndef SWIG
 #include "XdmfObject.h"
-#include "vtk_hdf5.h"
+#include <hdf5.h>
 
 #endif /* SWIG */
 

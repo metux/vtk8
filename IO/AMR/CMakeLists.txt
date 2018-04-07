@@ -25,3 +25,6 @@ set_source_files_properties(
   )
 
 vtk_module_library(vtkIOAMR ${Module_SRCS})
+target_link_libraries(vtkIOAMR PUBLIC ${HDF5_LIBRARIES})
+target_include_directories(vtkIOAMR PUBLIC ${HDF5_INCLUDE_DIRS})
+target_compile_options(vtkIOAMR PUBLIC ${HDF5_CFLAGS})

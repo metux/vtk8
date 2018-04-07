@@ -15,6 +15,5 @@ vtk_module(vtkIOAMR
     vtkCommonSystem
     vtkFiltersAMR
     vtkParallelCore
-    vtkhdf5
     vtksys
   )
