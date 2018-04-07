@@ -24,6 +24,5 @@ vtk_module(vtkIOImage
     vtkCommonTransforms
     vtkDICOMParser
     vtkMetaIO
-    vtkjpeg
     vtksys
   )

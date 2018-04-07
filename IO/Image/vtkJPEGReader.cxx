@@ -22,7 +22,7 @@
 #include <vtksys/SystemTools.hxx>
 
 extern "C" {
-#include "vtk_jpeg.h"
+#include <jpeglib.h>
 #include <csetjmp>
 }
 

@@ -49,6 +49,6 @@ set_source_files_properties(
   )
 
 vtk_module_library(vtkIOImage ${Module_SRCS})
-target_link_libraries(vtkIOImage PUBLIC ${PNG_LIBRARIES} ${TIFF_LIBRARIES})
-target_include_directories(vtkIOImage PUBLIC ${PNG_INCLUDE_DIRS} ${TIFF_INCLUDE_DIRS})
-target_compile_options(vtkIOImage PUBLIC ${PNG_CFLAGS} ${TIFF_CFLAGS})
+target_link_libraries(vtkIOImage PUBLIC ${PNG_LIBRARIES} ${TIFF_LIBRARIES} ${JPEG_LIBRARIES})
+target_include_directories(vtkIOImage PUBLIC ${PNG_INCLUDE_DIRS} ${TIFF_INCLUDE_DIRS} ${JPEG_INCLUDE_DIRS})
+target_compile_options(vtkIOImage PUBLIC ${PNG_CFLAGS} ${TIFF_CFLAGS} ${JPEG_INCLUDE_DIRS})
