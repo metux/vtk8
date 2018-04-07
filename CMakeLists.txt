@@ -412,6 +412,7 @@ pkg_check_modules(PNG REQUIRED libpng)
 pkg_check_modules(TIFF REQUIRED libtiff-4)
 pkg_check_modules(JPEG REQUIRED libjpeg)
 pkg_check_modules(FREETYPE REQUIRED freetype2)
+pkg_check_modules(EXPAT REQUIRED expat)
 
 #-----------------------------------------------------------------------------
 # Configure files with settings for use by the build.

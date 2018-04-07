@@ -14,7 +14,7 @@
 =========================================================================*/
 #include "vtkXMLParser.h"
 #include "vtkObjectFactory.h"
-#include "vtk_expat.h"
+#include <expat.h>
 
 #include <vtksys/SystemTools.hxx>
 
