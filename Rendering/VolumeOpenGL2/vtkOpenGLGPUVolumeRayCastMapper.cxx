@@ -82,7 +82,7 @@
 #include <vtkVolumeTexture.h>
 #include <vtkWeakPointer.h>
 
-#include <vtk_glew.h>
+#include <GL/glew.h>
 
 // C/C++ includes
 #include <cassert>

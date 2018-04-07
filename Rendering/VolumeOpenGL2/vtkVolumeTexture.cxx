@@ -12,7 +12,7 @@
 #include "vtkRenderer.h"
 #include "vtkTextureObject.h"
 #include "vtkVolumeTexture.h"
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 
 vtkVolumeTexture::vtkVolumeTexture()

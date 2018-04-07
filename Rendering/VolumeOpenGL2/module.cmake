@@ -23,7 +23,6 @@ vtk_module(vtkRenderingVolumeOpenGL2
     vtkRenderingCore
     vtkRenderingOpenGL2
     vtkRenderingVolume
-    vtkglew
   PRIVATE_DEPENDS
     vtkCommonMath
     vtkCommonSystem

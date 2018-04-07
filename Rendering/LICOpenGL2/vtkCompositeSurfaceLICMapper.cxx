@@ -35,7 +35,7 @@
 // #include "vtkMultiBlockDataSet.h"
 // #include "vtkMultiPieceDataSet.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include "vtkCellData.h"
 #include "vtkColorTransferFunction.h"

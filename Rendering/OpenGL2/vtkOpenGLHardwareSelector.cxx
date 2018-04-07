@@ -14,7 +14,7 @@
 =========================================================================*/
 #include "vtkOpenGLHardwareSelector.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include "vtkObjectFactory.h"
 #include "vtkDataObject.h"

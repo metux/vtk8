@@ -150,7 +150,7 @@ macro(vtkm_configure_component_OpenGL)
 
   # Many OpenGL classes in VTK-m require GLEW (too many to try to separate them
   # out and still get something worth using). So require that too.
-  find_package(GLEW ${VTKm_FIND_PACKAGE_QUIETLY})
+  pkg_check_modules(GLEW REQUIRED glew)
 
   list(APPEND vtkm_opengl_dependent_vars GLEW_FOUND)
   if(GLEW_FOUND)

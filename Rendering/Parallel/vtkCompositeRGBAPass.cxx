@@ -49,7 +49,7 @@
 #endif
 
 #ifdef VTK_OPENGL2
-# include "vtk_glew.h"
+# include <GL/glew.h>
 #else
 # include "vtkFrameBufferObject.h"
 # include "vtkgl.h"

@@ -39,7 +39,7 @@ PURPOSE.  See the above copyright notice for more information.
 
 #include "vtkWidgetEvent.h"
 
-//#include "vtk_glew.h"
+//#include <GL/glew.h>
 
 vtkStandardNewMacro(vtkOpenVRMenuRepresentation);
 

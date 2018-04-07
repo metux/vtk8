@@ -43,7 +43,7 @@
 #include "vtkTextureObject.h"
 #include "vtkTextureUnitManager.h"
 #include "vtkTransform.h"
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 // debugging
 #include "vtkTimerLog.h"

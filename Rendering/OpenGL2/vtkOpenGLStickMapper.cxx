@@ -36,7 +36,7 @@
 
 #include "vtkStickMapperVS.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 
 

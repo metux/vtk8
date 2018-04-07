@@ -12,7 +12,7 @@
      PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
-#include "vtk_glew.h"
+#include <GL/glew.h>
 #include "vtkOpenGLRenderUtilities.h"
 
 #include "vtkNew.h"

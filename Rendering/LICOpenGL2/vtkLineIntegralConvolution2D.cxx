@@ -14,7 +14,7 @@
 =========================================================================*/
 #include "vtkLineIntegralConvolution2D.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include "vtkOpenGLHelper.h"
 

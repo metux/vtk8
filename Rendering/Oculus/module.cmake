@@ -10,8 +10,6 @@ vtk_module(vtkRenderingOculus
     vtkRenderingOpenGL2
     vtkInteractionStyle
   ${_impl}
-  PRIVATE_DEPENDS
-    vtkglew
   TEST_DEPENDS
     vtkTestingCore
     vtkTestingRendering

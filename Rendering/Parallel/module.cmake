@@ -1,7 +1,3 @@
-unset(__priv_deps)
-if("${VTK_RENDERING_BACKEND}" STREQUAL "OpenGL2")
-  list(APPEND __priv_deps vtkglew)
-endif()
 vtk_module(vtkRenderingParallel
   TEST_DEPENDS
     vtkParallelMPI
@@ -18,7 +14,6 @@ vtk_module(vtkRenderingParallel
     vtkRendering${VTK_RENDERING_BACKEND}
     vtkRenderingCore
   PRIVATE_DEPENDS
-    ${__priv_deps}
     vtkCommonDataModel
     vtkCommonMath
     vtkCommonSystem

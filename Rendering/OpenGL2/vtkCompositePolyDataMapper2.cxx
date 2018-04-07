@@ -14,7 +14,7 @@
 =========================================================================*/
 #include "vtkCompositePolyDataMapper2.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include "vtkBoundingBox.h"
 #include "vtkCellData.h"

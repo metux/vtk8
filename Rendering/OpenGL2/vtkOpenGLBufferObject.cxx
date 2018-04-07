@@ -14,7 +14,7 @@
 #include "vtkOpenGLBufferObject.h"
 #include "vtkObjectFactory.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 vtkStandardNewMacro(vtkOpenGLBufferObject)
 

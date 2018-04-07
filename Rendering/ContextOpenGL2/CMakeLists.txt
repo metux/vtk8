@@ -39,6 +39,6 @@ set_source_files_properties(
 
 vtk_module_library(${vtk-module} ${module_SRCS})
 vtk_module_link_libraries(${vtk-module}
-  LINK_PRIVATE ${GLEW_LIBRARY} ${OPENGL_LIBRARIES})
+  LINK_PRIVATE ${GLEW_LIBRARIES} ${OPENGL_LIBRARIES})
 include(vtkOpenGL)
 vtk_opengl_link(${vtk-module})

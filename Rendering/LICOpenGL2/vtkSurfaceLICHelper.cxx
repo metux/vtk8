@@ -13,7 +13,7 @@
 =========================================================================*/
 #include "vtkSurfaceLICHelper.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 #include "vtkOpenGLFramebufferObject.h"
 #include "vtkPixelBufferObject.h"
 #include "vtkPainterCommunicator.h"

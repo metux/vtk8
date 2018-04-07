@@ -15,7 +15,7 @@
 #include "vtkShader.h"
 #include "vtkObjectFactory.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 vtkStandardNewMacro(vtkShader)
 

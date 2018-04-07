@@ -187,9 +187,6 @@ else()
   option(BUILD_SHARED_LIBS "Build VTK with shared libraries." ON)
 endif()
 
-# default to not using the system GLEW as ours has fixes in it right now
-set(VTK_USE_SYSTEM_GLEW OFF CACHE BOOL "do not use a system glew")
-
 set(VTK_BUILD_SHARED_LIBS ${BUILD_SHARED_LIBS})
 
 #-----------------------------------------------------------------------------
@@ -417,6 +414,7 @@ pkg_check_modules(LIBXML2 REQUIRED libxml-2.0)
 pkg_check_modules(OGGTHEORA REQUIRED ogg theora)
 pkg_check_modules(LIBPROJ4 REQUIRED proj>=4.0)
 include(FindHDF5)
+pkg_check_modules(GLEW REQUIRED glew)
 
 #-----------------------------------------------------------------------------
 # Configure files with settings for use by the build.

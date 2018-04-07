@@ -24,7 +24,7 @@
 #include <vtkObjectFactory.h>
 #include <vtkPointData.h>
 #include <vtkTextureObject.h>
-#include <vtk_glew.h>
+#include <GL/glew.h>
 
 
 /**

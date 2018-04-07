@@ -23,7 +23,7 @@
 #include <map>
 #include <vector>
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 vtkStandardNewMacro(vtkOpenGLVertexArrayObject)
 

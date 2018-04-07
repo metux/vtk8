@@ -22,7 +22,7 @@
 #include <vtkPiecewiseFunction.h>
 #include <vtkTextureObject.h>
 #include <vtkVolumeMapper.h>
-#include <vtk_glew.h>
+#include <GL/glew.h>
 #include <vtkMath.h>
 
 

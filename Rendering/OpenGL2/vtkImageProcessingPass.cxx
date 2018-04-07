@@ -13,7 +13,7 @@
 
 =========================================================================*/
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include "vtkImageProcessingPass.h"
 #include "vtkObjectFactory.h"

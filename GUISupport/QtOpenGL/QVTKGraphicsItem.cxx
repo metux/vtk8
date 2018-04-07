@@ -19,7 +19,7 @@
 -------------------------------------------------------------------------*/
 
 #ifdef VTK_OPENGL2
-#include "vtk_glew.h"
+#include <GL/glew.h>
 #endif
 
 #include "QVTKGraphicsItem.h"

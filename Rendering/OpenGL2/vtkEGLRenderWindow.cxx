@@ -23,7 +23,7 @@
 #include "vtkRenderWindowInteractor.h"
 #include "vtkRendererCollection.h"
 #include "vtkToolkits.h"
-#include "vtk_glew.h"
+#include <GL/glew.h>
 #include "vtksys/SystemTools.hxx"
 
 #include <cassert>

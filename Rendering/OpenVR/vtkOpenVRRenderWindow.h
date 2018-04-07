@@ -45,7 +45,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include <openvr.h> // for ivars
 #include <vector> // ivars
 #include "vtkOpenGLHelper.h" // used for ivars
-#include "vtk_glew.h" // used for methods
+#include <GL/glew.h> // used for methods
 #include "vtkEventData.h" // for enums
 
 class vtkCamera;

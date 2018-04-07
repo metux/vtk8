@@ -25,7 +25,7 @@
 #include "vtkRenderingOpenGL2Module.h" // For export macro
 #include "vtkObject.h"
 
-#include "vtk_glew.h" // Needed for GLuint.
+#include <GL/glew.h> // Needed for GLuint.
 #include <string> // for std::string
 
 class vtkOpenGLBufferObject;

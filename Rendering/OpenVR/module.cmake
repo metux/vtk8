@@ -16,7 +16,6 @@ vtk_module(vtkRenderingOpenVR
     vtkIOXMLParser
   ${_impl}
   PRIVATE_DEPENDS
-    vtkglew
     vtkImagingSources
     vtkFiltersSources
   TEST_DEPENDS

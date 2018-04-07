@@ -23,7 +23,7 @@
 #include "vtkProperty.h"
 #include "vtkUnsignedCharArray.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include <set>
 

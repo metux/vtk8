@@ -13,7 +13,7 @@
 
 =========================================================================*/
 #include "vtkOpenGLShaderCache.h"
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include "vtkObjectFactory.h"
 #include "vtkOpenGLError.h"

@@ -24,5 +24,4 @@ vtk_module(vtkDomainsChemistryOpenGL2
     vtkCommonExecutionModel
     vtkCommonMath
     vtkRenderingCore
-    vtkglew
   )

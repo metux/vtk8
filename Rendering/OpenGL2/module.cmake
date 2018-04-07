@@ -29,6 +29,7 @@ vtk_module(vtkRenderingOpenGL2
     vtkCommonMath
     vtkCommonSystem
     vtkCommonTransforms
-    vtkglew
     vtksys
+  EXTRA_LIBS
+    ${GLEW_LIBRARIES}
   )

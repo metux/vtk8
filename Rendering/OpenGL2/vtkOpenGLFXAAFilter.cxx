@@ -15,7 +15,7 @@
 
 #include "vtkOpenGLFXAAFilter.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include "vtkFXAAOptions.h"
 #include "vtkObjectFactory.h"

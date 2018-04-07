@@ -23,6 +23,5 @@ vtk_module(vtkRenderingLICOpenGL2
     vtkImagingCore
     vtkImagingSources
     vtkRenderingCore
-    vtkglew
     vtksys
   )

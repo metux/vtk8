@@ -25,7 +25,7 @@
 #include "vtkWeakPointer.h"
 #include "vtkSmartPointer.h"
 #include "vtkOpenGLHelper.h"
-#include "vtk_glew.h"
+#include <GL/glew.h>
 #include "vtkTextureObject.h"
 
 #include <deque> // for methods

@@ -19,7 +19,7 @@
 #include "vtkOpenGLError.h"
 #include "vtkShaderProgram.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 vtkStandardNewMacro(vtkTransformFeedback)
 

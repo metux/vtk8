@@ -19,7 +19,7 @@
 #include "vtkOpenGLVertexBufferObjectCache.h"
 #include "vtkPoints.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 vtkStandardNewMacro(vtkOpenGLVertexBufferObject)
 

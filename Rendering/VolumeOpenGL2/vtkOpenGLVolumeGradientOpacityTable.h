@@ -23,7 +23,7 @@
 #include <vtkTextureObject.h>
 #include <vtkVolumeMapper.h>
 #include <vtkMath.h>
-#include <vtk_glew.h>
+#include <GL/glew.h>
 
 
 //----------------------------------------------------------------------------

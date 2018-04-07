@@ -19,5 +19,4 @@ vtk_module(vtkRenderingContextOpenGL2
     vtkCommonMath
     vtkCommonTransforms
     vtkImagingCore
-    vtkglew
   )

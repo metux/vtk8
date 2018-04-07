@@ -21,7 +21,7 @@
 // vtkExternalOpenGLRenderer by drawing a GL_TRIANGLE in the scene before
 // drawing the vtk sphere.
 
-#include <vtk_glew.h>
+#include <GL/glew.h>
 // GLUT includes
 #if defined(__APPLE__)
 # include <GLUT/glut.h> // Include GLUT API.

@@ -16,7 +16,7 @@
 #define vtkOpenGLError_h
 
 #include "vtkSetGet.h"
-#include "vtk_glew.h"
+#include <GL/glew.h>
 #include <sstream>
 
 #ifndef NDEBUG

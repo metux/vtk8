@@ -18,7 +18,7 @@
 #include "vtkObjectFactory.h"
 #include "vtkOpenGLRenderer.h" // For query allocation bug check
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 // glQueryCounter unavailable in OpenGL ES:
 #if defined(GL_ES_VERSION_3_0)

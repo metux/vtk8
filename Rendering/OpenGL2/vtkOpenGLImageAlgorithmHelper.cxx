@@ -22,7 +22,7 @@
 #include "vtkNew.h"
 #include "vtkOpenGLFramebufferObject.h"
 #include "vtkOpenGLShaderCache.h"
-#include "vtk_glew.h"
+#include <GL/glew.h>
 #include "vtkPixelTransfer.h"
 #include "vtkPointData.h"
 #include "vtkPixelBufferObject.h"

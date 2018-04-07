@@ -38,7 +38,7 @@
 #include "vtkPointGaussianVS.h"
 #include "vtkPolyDataFS.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 class vtkOpenGLPointGaussianMapperHelper : public vtkOpenGLPolyDataMapper
 {

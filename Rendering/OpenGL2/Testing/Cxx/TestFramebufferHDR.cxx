@@ -31,7 +31,7 @@
 #include "vtkRenderer.h"
 #include "vtkTestUtilities.h"
 #include "vtkTextureObject.h"
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 //----------------------------------------------------------------------------
 int TestFramebufferHDR(int argc, char *argv[])

@@ -36,7 +36,7 @@
 #include "vtkSurfaceLICMapper.h"
 #include "vtkSurfaceLICInterface.h"
 
-#include "vtk_glew.h"
+#include <GL/glew.h>
 
 #include <vector>
 #include <string>
