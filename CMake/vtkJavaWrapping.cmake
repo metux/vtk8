@@ -73,7 +73,7 @@ function(vtk_add_java_wrapping module_name module_srcs module_hdrs)
     install(TARGETS ${module_name}Java
       EXPORT ${VTK_INSTALL_EXPORT_NAME}
       RUNTIME DESTINATION ${VTK_INSTALL_RUNTIME_DIR} COMPONENT RuntimeLibraries
-      LIBRARY DESTINATION ${VTK_INSTALL_LIBRARY_DIR} COMPONENT RuntimeLibraries
+      LIBRARY DESTINATION ${VTK_INSTALL_JNI_DIR} COMPONENT RuntimeLibraries
       ARCHIVE DESTINATION ${VTK_INSTALL_ARCHIVE_DIR} COMPONENT Development)
   endif()
 endfunction()
