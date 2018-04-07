@@ -85,7 +85,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkToolkits.h"
 #include "vtkUnstructuredGrid.h"
 
-#include "vtk_netcdfcpp.h"
+#include <netcdfcpp.h>
 
 #include <algorithm>
 #include <cfloat>

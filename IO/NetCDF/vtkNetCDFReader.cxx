@@ -49,7 +49,7 @@
 
 #include <vtksys/SystemTools.hxx>
 
-#include "vtk_netcdf.h"
+#include <netcdf.h>
 
 #define CALL_NETCDF(call) \
   { \

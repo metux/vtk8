@@ -14,5 +14,4 @@ vtk_module(vtkIOParallelNetCDF
     vtkCommonCore
     vtkCommonDataModel
     vtkParallelMPI
-    vtknetcdf
   )

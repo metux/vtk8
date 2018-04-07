@@ -62,7 +62,7 @@ POSSIBILITY OF SUCH DAMAGES.
 #include "vtkSmartPointer.h"
 
 #include "vtkMINC.h"
-#include "vtk_netcdf.h"
+#include <netcdf.h>
 
 #include <cstdlib>
 #include <cctype>

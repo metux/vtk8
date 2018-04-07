@@ -15,6 +15,5 @@ vtk_module(vtkIOMINC
     vtkCommonTransforms
     vtkFiltersHybrid
     vtkRenderingCore
-    vtknetcdf
     vtksys
   )

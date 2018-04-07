@@ -69,7 +69,7 @@ POSSIBILITY OF SUCH DAMAGES.
 
 #include "vtkMINCImageAttributes.h"
 #include "vtkMINC.h"
-#include "vtk_netcdf.h"
+#include <netcdf.h>
 
 #include <cstdlib>
 #include <cctype>

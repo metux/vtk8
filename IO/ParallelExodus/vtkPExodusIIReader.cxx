@@ -37,7 +37,7 @@
 #include "vtkStreamingDemandDrivenPipeline.h"
 #include "vtkUnstructuredGrid.h"
 
-#include "vtk_netcdf.h"
+#include <netcdf.h>
 #include "vtk_exodusII.h"
 
 #include "vtksys/SystemTools.hxx"

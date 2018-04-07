@@ -35,7 +35,7 @@
 #include <set>
 #include <sstream>
 #include <vector>
-#include <vtk_netcdfcpp.h>
+#include <netcdfcpp.h>
 
 namespace
 {

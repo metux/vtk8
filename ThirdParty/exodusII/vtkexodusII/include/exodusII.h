@@ -43,7 +43,7 @@
 #ifndef EXODUS_II_HDR
 #define EXODUS_II_HDR
 
-#include "vtk_netcdf.h"
+#include <netcdf.h>
 #include "vtk_exodus2_mangle.h"
 #include "vtkexodusII/include/exodusII_cfg.h"
 

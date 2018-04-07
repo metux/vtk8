@@ -71,7 +71,7 @@ POSSIBILITY OF SUCH DAMAGES.
 
 #include "vtkMINCImageAttributes.h"
 #include "vtkMINC.h"
-#include "vtk_netcdf.h"
+#include <netcdf.h>
 
 #ifdef _WIN32
 #include "vtkWindows.h"

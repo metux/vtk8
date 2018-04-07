@@ -25,6 +25,5 @@ vtk_module(vtkIOParallel
     vtkFiltersParallel
     vtkParallelCore
     vtkexodusII
-    vtknetcdf
     vtksys
   )

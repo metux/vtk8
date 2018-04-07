@@ -52,7 +52,7 @@
 
 #include <cstring>
 
-#include "vtk_netcdf.h"
+#include <netcdf.h>
 
 #define CALL_NETCDF_GENERIC(call, on_error) \
   { \

@@ -29,7 +29,7 @@ PURPOSE.  See the above copyright notice for more information.
 #include "vtkMPI.h"
 #include "vtkMPIController.h"
 
-#include "vtk_netcdf.h"
+#include <netcdf.h>
 #include <string>
 #include <vector>
 #include <set>

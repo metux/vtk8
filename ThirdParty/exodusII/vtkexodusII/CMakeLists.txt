@@ -241,7 +241,7 @@ ENDIF()
 
 
 VTK_ADD_LIBRARY(vtkexoIIc ${cbind_SRCS})
-TARGET_LINK_LIBRARIES(vtkexoIIc ${vtknetcdf_LIBRARIES})
+TARGET_LINK_LIBRARIES(vtkexoIIc ${NETCDF_LIBRARIES})
 
 #INCLUDE (${CMAKE_ROOT}/Modules/Dart.cmake)
 
