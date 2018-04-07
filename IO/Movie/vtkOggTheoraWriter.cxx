@@ -19,7 +19,8 @@
 #include "vtkObjectFactory.h"
 #include "vtkErrorCode.h"
 
-#include "vtk_oggtheora.h"
+#include <ogg/ogg.h>
+#include <theora/theoraenc.h>
 
 #include <ctime>
 

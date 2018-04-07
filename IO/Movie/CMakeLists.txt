@@ -9,10 +9,8 @@ set_source_files_properties(
 
 set (VTK_HAS_OGGTHEORA_SUPPORT)
 
-if(vtkIOMovie_vtkoggtheora)
   set (VTK_HAS_OGGTHEORA_SUPPORT TRUE)
   list(APPEND Module_SRCS vtkOggTheoraWriter.cxx)
-endif()
 
 if(WIN32)
   # Check if VideoForWindows is supported. This also adds an option
