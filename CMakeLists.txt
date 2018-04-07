@@ -413,6 +413,7 @@ pkg_check_modules(EXPAT REQUIRED expat)
 pkg_check_modules(LIBXML2 REQUIRED libxml-2.0)
 pkg_check_modules(OGGTHEORA REQUIRED ogg theora)
 pkg_check_modules(LIBPROJ4 REQUIRED proj>=4.0)
+pkg_check_modules(SQLITE3 REQUIRED sqlite3)
 include(FindHDF5)
 pkg_check_modules(GLEW REQUIRED glew)
 

@@ -29,7 +29,7 @@
 #include <fstream>
 #include <sstream>
 
-#include <vtksqlite/vtk_sqlite3.h>
+#include <sqlite3.h>
 
 vtkStandardNewMacro(vtkSQLiteDatabase);
 
@@ -307,15 +307,15 @@ bool vtkSQLiteDatabase::Open(const char* password, int mode)
     }
   }
 
-  int result = vtk_sqlite3_open(this->DatabaseFileName, & (this->SQLiteInstance));
+  int result = sqlite3_open(this->DatabaseFileName, & (this->SQLiteInstance));
 
-  if (result != VTK_SQLITE_OK)
+  if (result != SQLITE_OK)
   {
     vtkDebugMacro(<<"SQLite open() failed.  Error code is "
                   << result << " and message is "
-                  << vtk_sqlite3_errmsg(this->SQLiteInstance) );
+                  << sqlite3_errmsg(this->SQLiteInstance) );
 
-    vtk_sqlite3_close(this->SQLiteInstance);
+    sqlite3_close(this->SQLiteInstance);
     return false;
   }
   else
@@ -334,8 +334,8 @@ void vtkSQLiteDatabase::Close()
   }
   else
   {
-    int result = vtk_sqlite3_close(this->SQLiteInstance);
-    if (result != VTK_SQLITE_OK)
+    int result = sqlite3_close(this->SQLiteInstance);
+    if (result != SQLITE_OK)
     {
       vtkWarningMacro(<< "Close(): SQLite returned result code " << result);
     }
@@ -374,7 +374,7 @@ vtkStringArray * vtkSQLiteDatabase::GetTables()
   if (!status)
   {
     vtkErrorMacro(<< "GetTables(): Database returned error: "
-                  << vtk_sqlite3_errmsg(this->SQLiteInstance) );
+                  << sqlite3_errmsg(this->SQLiteInstance) );
     query->Delete();
     return this->Tables;
   }
@@ -403,7 +403,7 @@ vtkStringArray * vtkSQLiteDatabase::GetRecord(const char *table)
   if (!status)
   {
     vtkErrorMacro(<< "GetRecord(" << table << "): Database returned error: "
-                  << vtk_sqlite3_errmsg(this->SQLiteInstance) );
+                  << sqlite3_errmsg(this->SQLiteInstance) );
     query->Delete();
     return nullptr;
   }
@@ -467,10 +467,10 @@ bool vtkSQLiteDatabase::ParseURL(const char* URL)
 // ----------------------------------------------------------------------
 bool vtkSQLiteDatabase::HasError()
 {
-  return (vtk_sqlite3_errcode(this->SQLiteInstance)!=VTK_SQLITE_OK);
+  return (sqlite3_errcode(this->SQLiteInstance)!=SQLITE_OK);
 }
 
 const char* vtkSQLiteDatabase::GetLastErrorText()
 {
-  return vtk_sqlite3_errmsg(this->SQLiteInstance);
+  return sqlite3_errmsg(this->SQLiteInstance);
 }

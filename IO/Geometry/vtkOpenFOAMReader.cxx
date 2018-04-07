@@ -1969,7 +1969,7 @@ vtkTypeInt64 vtkFoamFile::ReadIntValue()
 
 // extremely simplified high-performing string to floating point
 // conversion code based on
-// ParaView3/VTK/Utilities/vtksqlite/vtk_sqlite3.c
+// ParaView3/VTK/Utilities/vtksqlite/sqlite3.c
 template <typename FloatType>
 FloatType vtkFoamFile::ReadFloatValue()
 {

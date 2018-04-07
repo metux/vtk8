@@ -28,3 +28,6 @@ set_source_files_properties(
   )
 
 vtk_module_library(vtkIOSQL ${Module_SRCS} ${SQLite_SRCS})
+target_link_libraries(vtkIOSQL PUBLIC ${SQLITE3_LIBRARIES})
+target_include_directories(vtkIOSQL PUBLIC ${SQLITE3_INCLUDE_DIRS})
+target_compile_options(vtkIOSQL PUBLIC ${SQLITE3_CFLAGS})

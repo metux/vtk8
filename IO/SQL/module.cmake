@@ -13,6 +13,5 @@ vtk_module(vtkIOSQL
     vtkCommonExecutionModel
     vtkIOCore
   PRIVATE_DEPENDS
-    vtksqlite
     vtksys
   )
