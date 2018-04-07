@@ -19,7 +19,7 @@
 #include "vtkObjectFactory.h"
 #include "vtkPointData.h"
 #include "vtkStreamingDemandDrivenPipeline.h"
-#include "vtk_tiff.h"
+#include <tiffio.h>
 
 vtkStandardNewMacro(vtkTIFFWriter);
 

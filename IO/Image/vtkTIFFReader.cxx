@@ -26,7 +26,7 @@
 #include <algorithm>
 
 extern "C" {
-#include "vtk_tiff.h"
+#include <tiffio.h>
 }
 
 namespace {

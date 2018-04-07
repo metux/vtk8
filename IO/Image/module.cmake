@@ -26,5 +26,4 @@ vtk_module(vtkIOImage
     vtkMetaIO
     vtkjpeg
     vtksys
-    vtktiff
   )
