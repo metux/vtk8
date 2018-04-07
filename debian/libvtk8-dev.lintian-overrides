@@ -1,0 +1,4 @@
+libvtk8-dev: shlib-without-versioned-soname
+libvtk8-dev: package-name-doesnt-match-sonames
+libvtk8-dev: postinst-must-call-ldconfig
+libvtk8-dev: hardening-no-relro

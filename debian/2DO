@@ -1,0 +1,9 @@
+
+check more carefully:
+
+* alglib: bundled 1.2.1 -- debian: 3.10
+
+unbundle:
+* exodusII
+
+* java libs: soname

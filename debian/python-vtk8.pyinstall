@@ -1,0 +1,7 @@
+debian/build/Wrapping/Python/vtk/*.py           vtk
+debian/build/Wrapping/Python/vtk/gtk/*.py       vtk.gtk
+debian/build/Wrapping/Python/vtk/qt4/*.py       vtk.qt4
+debian/build/Wrapping/Python/vtk/test/*.py      vtk.test
+debian/build/Wrapping/Python/vtk/tk/*.py        vtk.tk
+debian/build/Wrapping/Python/vtk/util/*.py      vtk.util
+debian/build/Wrapping/Python/vtk/wx/*.py        vtk.wx

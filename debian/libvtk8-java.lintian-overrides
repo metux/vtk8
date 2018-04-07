@@ -1,0 +1,3 @@
+# Upstream does not provide manpages
+libvtk8-java: binary-without-manpage
+libvtk8-java: hardening-no-relro

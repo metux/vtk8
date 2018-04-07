@@ -1,0 +1,3 @@
+libvtk8.1-qt: hardening-no-relro
+libvtk8.1-qt: package-name-doesnt-match-sonames
+

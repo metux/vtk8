@@ -1,0 +1,102 @@
+#!/usr/bin/make -f
+BUILDDIR = $(CURDIR)/debian/build
+
+# export JAVA_HOME to help FindJava.cmake and FindJNI.cmake
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+%:
+	dh $@ --buildsystem=cmake --builddirectory=$(BUILDDIR) --with python2 --with javahelper --parallel
+
+## triy it ... 
+#	-DCMAKE_C_COMPILER=mpicc \
+#	-DCMAKE_CXX_COMPILER=mpic++ \
+
+## check why GL doesnt compile
+#	-DVTK_USE_SYSTEM_GL2PS=ON \
+
+extra_flags +=  \
+	-DCMAKE_VERBOSE_MAKEFILE=ON \
+	-DBUILD_DOCUMENTATION=ON \
+	-DBUILD_EXAMPLES=ON \
+	-DBUILD_SHARED_LIBS=ON \
+	-DBUILD_TESTING=OFF \
+	-DVTK_USE_TK=ON \
+	-DVTK_WRAP_JAVA=ON \
+	-DVTK_WRAP_PYTHON=ON \
+	-DVTK_WRAP_TCL=ON \
+	-DVTK_EXTRA_COMPILER_WARNINGS=ON \
+	-DVTK_Group_Imaging=ON \
+	-DVTK_Group_MPI=ON \
+	-DVTK_Group_Tk=ON \
+	-DVTK_Group_Views=ON \
+	-DVTK_BUILD_ALL_MODULES=ON \
+	-DMPI_CXX_INCLUDE_PATH="/usr/include/mpi" \
+	-DVTK_INSTALL_LIBRARY_DIR="/usr/lib/$(DEB_HOST_MULTIARCH)" \
+	-DVTK_INSTALL_JNI_DIR="/usr/lib/$(DEB_HOST_MULTIARCH)/jni" \
+	-DVTK_MAKE_INSTANTIATORS=ON \
+	-DCMAKE_EXE_LINKER_FLAGS="-Wl,--as-needed" \
+	-DCMAKE_MODULE_LINKER_FLAGS="-Wl,--as-needed" \
+	-DCMAKE_SHARED_LINKER_FLAGS="-Wl,--as-needed" \
+	-DCMAKE_BUILD_TYPE=None \
+	-DVTK_USE_GCC_VISIBILITY=ON \
+	-DModule_vtkRenderingExternal=ON \
+	-DVTK_QT_VERSION=5 \
+	-DVTK_Group_Qt=ON
+
+override_dh_auto_configure:
+ifneq (,$(filter $(DEB_HOST_ARCH),$(noqt_archs)))
+	echo '' > $(CURDIR)/Views/Qt/module.cmake
+	echo '' > $(CURDIR)/GUISupport/QtWebkit/module.cmake
+	echo '' > $(CURDIR)/Rendering/Qt/module.cmake
+	echo '' > $(CURDIR)/GUISupport/QtOpenGL/module.cmake
+	echo '' > $(CURDIR)/Examples/GUI/Qt/SimpleView/CMakeLists.txt
+endif
+	dh_auto_configure -- $(extra_flags)
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf $(BUILDDIR)
+
+override_dh_auto_build:
+	dh_auto_build
+	# Make doc (see wiki/VTK/debian/buildingDoxygen)
+	cd $(BUILDDIR) && make DoxygenDoc 
+	# remove .md5 files
+	find $(BUILDDIR)/Utilities/Doxygen/doc/html/ -name "*.md5" | xargs rm -f
+
+override_dh_auto_install:
+	dh_auto_install -X.pyc -X.pyo
+	# Modify vtkWrapJava.cmake to properly upload JavaDependencies.cmake.in	from $VTK_DIR
+	perl -pi -e "s|{dir}/JavaDependencies.cmake.in\"|{VTK_DIR}/JavaDependencies.cmake.in\"|" debian/tmp/usr/lib/cmake/vtk-8.1/vtkWrapJava.cmake
+	# java archive
+	mkdir -p $(CURDIR)/debian/tmp/usr/share/java/
+	mv $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/vtk.jar $(CURDIR)/debian/tmp/usr/share/java/vtk8.jar
+	# Correct headers for paraview
+	mv $(CURDIR)/debian/build/bin/vtkpython $(CURDIR)/debian/build/bin/vtk8python
+	sed -i -e "s/FATAL_ERROR/STATUS/g" $(CURDIR)/debian/tmp/usr/lib/cmake/vtk-8.1/VTKTargets.cmake
+	chrpath -d $(CURDIR)/debian/build/bin/vtk8python
+	chrpath -d $(CURDIR)/debian/build/bin/pvtk
+	chrpath -d $(CURDIR)/debian/build/bin/pvtkpython
+	mv $(CURDIR)/debian/tmp/usr/bin/vtk $(CURDIR)/debian/tmp/usr/bin/vtk8
+	# cleanup precompiled python bytecode
+	find $(CURDIR)/debian/tmp/ -name "*.pyc" | xargs rm -f
+	find $(CURDIR)/debian/tmp/ -name "*.pyo" | xargs rm -f
+	sed -i -e "9 a\ append libPath /${DEB_HOST_MULTIARCH}" $(CURDIR)/debian/tmp/usr/lib/tcltk/vtk-8.1/pkgIndex.tcl
+	# Qt stuff
+	mkdir -p $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/plugins/designer
+	mv $(CURDIR)/debian/tmp/usr/plugins/designer/*.so $(CURDIR)/debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/plugins/designer
+
+override_dh_install-arch:
+	dh_install -a --list-missing
+	find $(CURDIR)/debian/libvtk8-dev/ -name "*Qt*" -exec rm {} \;
+	find $(CURDIR)/debian/libvtk8.1/ -name "*Qt*" -exec rm {} \;
+	find $(CURDIR)/debian/libvtk8-dev/ -name "libvtkRenderingPythonTkWidgets-8.1.so" -exec rm {} \;
+	find $(CURDIR)/debian/libvtk8-dev/usr/include/ -name "Q*" -exec rm {} \;
+	chmod 755 $(CURDIR)/debian/libvtk8-dev/usr/share/vtk-8.1/doxygen/*.pl
+	rm -rf $(CURDIR)/debian/libvtk8-doc/usr/share/doc/vtk8-doc/html/_formulas.log
+	mkdir -p  $(CURDIR)/debian/python-vtk8/usr/lib/$(DEB_HOST_MULTIARCH)/python2.7/site-packages/ && \
+          cd $(CURDIR)/debian/python-vtk8/usr/lib/$(DEB_HOST_MULTIARCH)/python2.7/site-packages/ && \
+	  ln -s  /usr/lib/python2.7/dist/packages/vtk vtk
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l$(CURDIR)/debian/libvtk8-java/usr/lib/$(DEB_HOST_MULTIARCH)/jni/

@@ -1,0 +1,13 @@
+usr/bin/pvtk
+usr/bin/pvtkpython
+usr/bin/vtkpython
+usr/bin/vtkWrapPython-8.1
+usr/bin/vtkWrapPythonInit-8.1
+usr/lib/*/python2.7/site-packages/vtk		usr/lib/python2.7/dist-packages
+usr/lib/*/libvtkRenderingPythonTkWidgets-8.1.so	usr/lib/python2.7/dist-packages/vtk/
+
+## fixme: should package these separately (from upstream)
+usr/lib/*/python2.7/site-packages/constantly	usr/lib/python2.7/dist-packages
+usr/lib/*/python2.7/site-packages/hyperlink	usr/lib/python2.7/dist-packages
+usr/lib/*/python2.7/site-packages/incremental	usr/lib/python2.7/dist-packages
+usr/lib/*/python2.7/site-packages/wslink	usr/lib/python2.7/dist-packages

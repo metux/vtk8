@@ -1,0 +1,4 @@
+# Upstream does not provide manpages
+python-vtk8: binary-without-manpage
+python-vtk8: binary-or-shlib-defines-rpath
+python-vtk8: hardening-no-relro

@@ -1,0 +1,8 @@
+libXdmf.a
+usr/include/Xdmf*.hpp
+usr/include/ProjectVersion.hpp
+usr/include/Xdmf.hpp
+usr/include/loki/*.h
+usr/include/Xdmf*.hpp
+usr/include/ProjectVersion.hpp
+usr/include/loki

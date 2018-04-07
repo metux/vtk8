@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+#if [ "$1" = "configure" ]; then
+#    update-alternatives --install /usr/bin/ptxdist ptxdist /usr/lib/ptxdist-2018.03.0/bin/ptxdist-auto-version 80
+#fi
+
+exit 0

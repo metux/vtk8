@@ -1,0 +1,26 @@
+#CMake/TopologicalSort.cmake usr/lib/cmake/vtk-8.1/
+##CMake/exportheader.cmake.in usr/lib/cmake/vtk-8.1/
+#CMake/vtkGroups.cmake usr/lib/cmake/vtk-8.1/
+#CMake/vtkTesting*.cmake	usr/lib/cmake/vtk-8.1/
+##Common/Core/vtkPointAccumulator.hxx usr/include/vtk-8.1/
+##Common/DataModel/vtkMarchingCubesCases.h usr/include/vtk-8.1/
+#Filters/Statistics/vtkStatisticsAlgorithmPrivate.h usr/include/vtk-8.1/
+#IO/Import/vtk3DS.h usr/include/vtk-8.1/
+#Testing/Core/vtkTestDriver.h usr/include/vtk-8.1
+#Testing/Core/vtkTestUtilities.h usr/include/vtk-8.1/
+#Testing/Core/vtkTesting*.h usr/include/vtk-8.1
+#Testing/Rendering/vtkRegressionTestImage.h usr/include/vtk-8.1/
+#Testing/Rendering/vtkTesting*.h usr/include/vtk-8.1
+##ThirdParty/ftgl/src/FTGL.h usr/include/vtk-8.1/
+#Wrapping/Java/JavaDependencies.cmake.in usr/lib/cmake/vtk-8.1/
+#debian/build/lib/cmake/vtk-8.1/Modules/*-Headers.cmake	usr/lib/cmake/vtk-8.1/Modules/
+usr/include/vtk-8.1
+usr/lib/*/*.so
+usr/lib/*.so
+usr/lib/cmake/vtk-8.1
+#usr/share/doc/vtk-8.1/doxygen/* /usr/share/vtk-8.1/doxygen/
+usr/lib/*.a
+usr/lib/*/*.a
+usr/lib/*/cmake/Xdmf/XdmfConfig.cmake
+usr/share/doc/vtk-8.1/doxygen/*pl	usr/share/vtk-8.1/doxygen/
+usr/share/doc/vtk-8.1/doxygen/*.gif	usr/share/vtk-8.1/doxygen/

@@ -1,3 +1,41 @@
+Debianized VTK
+==============
+
+This is a debianzed VTK source tree, which can be directly built into a
+Debian/Ubuntu package (eg. via dpkg-buildpackage) w/o any further patching.
+All necessary patches are already applied.
+
+The most important change against upstream is unbundling certain 3rdparty
+libraries. Main reasons for NOT bundling 3rdparty libs (and also why 
+upstream shouldn't do that) are:
+
+* it makes the package unnecessarily fat
+* slow and complex build, increases maintenance overhead (eg. 3rdparty
+  upstream changes, eg. bugfixes have to be applied manually, ...)
+* bad for security and bugfixes: distros usually provide bugfix/security
+  updates pretty fast - bundled libs are obviously not updated automatically,
+  so all packagers (in all distros) need to take extra care and port the
+  fixes to the bundled libs - heavy increase in maintenance overhead
+* risk of clashes between distro-provided and bundled libraries (eg. when
+  another application imports both vtk and some of the bundled libs) !
+  solving this problem requires a really strict isolation, including
+  changing all symbol names of the 3rdparty libs (eg. via symbol
+  versioning)
+
+Bottom line: the easiest, safest and cleanes way is biting the bitter
+apple and completely drop the bundled 3rdparty libs from the source tree,
+importing only the dist-provieded libs.
+
+As of now it's WIP, not all 3rdparty packages have been unbundled yet,
+only those I've found in the official debian/ubuntu repos, yet missing:
+
+* alglib
+* libexodus
+* tcl/tk
+* libgl2ps
+* libxdmf2
+
+
 ![VTK - The Visualization Toolkit](vtkBanner.gif)
 
 Introduction
