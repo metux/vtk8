@@ -20,7 +20,7 @@
 #include "vtkObjectFactory.h"
 #include "vtkStreamingDemandDrivenPipeline.h"
 #include "vtkUnsignedCharArray.h"
-#include "vtk_png.h"
+#include <png.h>
 #include <vtksys/SystemTools.hxx>
 
 #include <vector>

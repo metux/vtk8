@@ -3,6 +3,4 @@ if(ANDROID OR APPLE_IOS) # No GL2PS on mobile
 endif()
 vtk_module(vtkgl2ps
   EXCLUDE_FROM_WRAPPING
-  DEPENDS
-    vtkpng
 )

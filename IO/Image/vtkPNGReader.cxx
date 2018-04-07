@@ -18,7 +18,7 @@
 #include "vtkImageData.h"
 #include "vtkObjectFactory.h"
 #include "vtkPointData.h"
-#include "vtk_png.h"
+#include <png.h>
 #include <vtksys/SystemTools.hxx>
 
 #include <algorithm>

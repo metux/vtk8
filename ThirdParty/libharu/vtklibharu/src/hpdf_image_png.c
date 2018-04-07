@@ -21,7 +21,7 @@
 
 #ifndef LIBHPDF_HAVE_NOPNGLIB
 /* KITWARE_LIBHARU_CHANGE Use vtk's zlib: */
-#include <vtk_png.h>
+#include <png.h>
 #include <string.h>
 
 static void

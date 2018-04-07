@@ -52,7 +52,7 @@
 #endif
 
 #if defined(GL2PS_HAVE_LIBPNG)
-#include <vtk_png.h>
+#include <png.h>
 #endif
 
 /*********************************************************************

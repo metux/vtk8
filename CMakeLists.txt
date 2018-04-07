@@ -408,6 +408,7 @@ SET(VTK_HAS_EXODUS 1)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(ZLIB REQUIRED zlib)
 pkg_check_modules(LZ4 REQUIRED liblz4)
+pkg_check_modules(PNG REQUIRED libpng)
 
 #-----------------------------------------------------------------------------
 # Configure files with settings for use by the build.
