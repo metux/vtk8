@@ -16,6 +16,5 @@ vtk_module(vtkIOInfovis
     vtkIOCore
     vtkIOXMLParser
     vtkInfovisCore
-    vtklibxml2
     vtksys
   )

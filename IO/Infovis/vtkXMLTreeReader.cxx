@@ -30,9 +30,8 @@
 #include "vtkStringArray.h"
 #include "vtkTree.h"
 
-#include "vtk_libxml2.h"
-#include VTKLIBXML2_HEADER(parser.h)
-#include VTKLIBXML2_HEADER(tree.h)
+#include <libxml/xmlversion.h>
+#include <libxml/parser.h>
 
 vtkStandardNewMacro(vtkXMLTreeReader);
 

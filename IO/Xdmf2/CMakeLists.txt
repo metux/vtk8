@@ -22,3 +22,6 @@ set_source_files_properties(
 
 #set(${vtk-module}_NO_HeaderTest 1) # TODO: helper classes and reenable
 vtk_module_library(vtkIOXdmf2 ${Module_SRCS})
+target_link_libraries(vtkIOXdmf2 PUBLIC ${LIBXML2_LIBRARIES})
+target_include_directories(vtkIOXdmf2 PUBLIC ${LIBXML2_INCLUDE_DIRS})
+target_compile_options(vtkIOXdmf2 PUBLIC ${LIBXML2_CFLAGS})

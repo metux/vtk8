@@ -18,3 +18,6 @@ set(Module_SRCS
   )
 
 vtk_module_library(vtkIOInfovis ${Module_SRCS})
+target_link_libraries(vtkIOInfovis PUBLIC ${LIBXML2_LIBRARIES})
+target_include_directories(vtkIOInfovis PUBLIC ${LIBXML2_INCLUDE_DIRS})
+target_compile_options(vtkIOInfovis PUBLIC ${LIBXML2_CFLAGS})
