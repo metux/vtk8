@@ -14,7 +14,7 @@
 =========================================================================*/
 #include "vtkZLibDataCompressor.h"
 #include "vtkObjectFactory.h"
-#include "vtk_zlib.h"
+#include <zlib.h>
 
 vtkStandardNewMacro(vtkZLibDataCompressor);
 

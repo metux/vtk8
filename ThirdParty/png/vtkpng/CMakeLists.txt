@@ -24,7 +24,7 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/vtkpngConfig.h.in
 
 vtk_add_library(vtkpng ${PNG_SRCS})
 
-target_link_libraries(vtkpng ${vtkzlib_LIBRARIES})
+target_link_libraries(vtkpng ${ZLIB_LIBRARIES})
 
 # link against the math library
 if(UNIX)

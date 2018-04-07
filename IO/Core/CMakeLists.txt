@@ -37,3 +37,7 @@ set_source_files_properties(
   )
 
 vtk_module_library(vtkIOCore ${Module_SRCS})
+
+target_link_libraries(vtkIOCore PUBLIC ${ZLIB_LIBRARIES})
+target_include_directories(vtkIOCore PUBLIC ${ZLIB_INCLUDE_DIRS})
+target_compile_options(vtkIOCore PUBLIC ${ZLIB_INCLUDE_DIRS})

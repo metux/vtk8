@@ -33,7 +33,7 @@ set_property(TARGET vtkgl2ps
 
 # Linking
 target_link_libraries(vtkgl2ps LINK_PRIVATE
-  ${vtkzlib_LIBRARIES}
+  ${ZLIB_LIBRARIES}
   ${vtkpng_LIBRARIES}
 )
 vtk_opengl_link(vtkgl2ps)

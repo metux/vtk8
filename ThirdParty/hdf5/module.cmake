@@ -19,6 +19,4 @@ if(VTK_USE_SYSTEM_HDF5)
 endif()
 vtk_module(vtkhdf5
   EXCLUDE_FROM_WRAPPING
-  DEPENDS
-    vtkzlib
   )

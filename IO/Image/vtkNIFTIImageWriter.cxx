@@ -35,7 +35,7 @@
 #include "vtkNIFTIImagePrivate.h"
 
 // Header for zlib
-#include "vtk_zlib.h"
+#include <zlib.h>
 
 #include <cstdio>
 #include <cstring>

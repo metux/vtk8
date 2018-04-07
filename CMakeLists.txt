@@ -404,6 +404,10 @@ include(vtkTestBuiltins)
 # Dispatch the build into the proper subdirectories.
 SET(VTK_HAS_EXODUS 1)
 
+# detect libraries via pkg-config
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(ZLIB REQUIRED zlib)
+
 #-----------------------------------------------------------------------------
 # Configure files with settings for use by the build.
 

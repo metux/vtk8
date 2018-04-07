@@ -99,9 +99,9 @@ ENDIF ()
 VTK_ADD_LIBRARY (vtkfreetype ${FREETYPE_SRCS})
 
 #
-# Link to vtkzlib
+# Link to zlib
 #
-TARGET_LINK_LIBRARIES(vtkfreetype ${vtkzlib_LIBRARIES})
+TARGET_LINK_LIBRARIES(vtkfreetype ${ZLIB_LIBRARIES})
 
 #
 # If we want freetype's Mac font support we need to link against

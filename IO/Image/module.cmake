@@ -28,5 +28,4 @@ vtk_module(vtkIOImage
     vtkpng
     vtksys
     vtktiff
-    vtkzlib
   )

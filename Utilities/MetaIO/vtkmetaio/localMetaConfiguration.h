@@ -33,7 +33,7 @@
   #define METAIO_USE_NAMESPACE  0
   #define METAIO_NAMESPACE      ITKMetaIO
 
-  #include "itk_zlib.h"
+  #include <zlib.h>
 
   #define METAIO_STL    std
   #define METAIO_STREAM std
@@ -48,7 +48,7 @@
   #define METAIO_USE_NAMESPACE  1
   #define METAIO_NAMESPACE      vtkmetaio
 
-  #include "vtk_zlib.h"
+  #include <zlib.h>
 
   #define METAIO_STL    std
   #define METAIO_STREAM std

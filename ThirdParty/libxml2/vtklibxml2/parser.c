@@ -76,7 +76,7 @@
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#include "vtk_libxml2_zlib.h"
+#include <zlib.h>
 
 /**
  * xmlParserMaxDepth:

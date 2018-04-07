@@ -48,7 +48,7 @@
 #endif
 
 #if defined(GL2PS_HAVE_ZLIB)
-#include <vtk_zlib.h>
+#include <zlib.h>
 #endif
 
 #if defined(GL2PS_HAVE_LIBPNG)

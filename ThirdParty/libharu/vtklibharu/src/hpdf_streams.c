@@ -33,7 +33,7 @@
 #ifndef LIBHPDF_HAVE_NOZLIB
 
 /* KITWARE_LIBHARU_CHANGE Use vtk's zlib: */
-#include <vtk_zlib.h>
+#include <zlib.h>
 /* KITWARE_LIBHARU_CHANGE This is included by vtk_zlib.h: */
 /* #include <zconf.h> */
 

@@ -47,7 +47,7 @@
 
 /* VTK_FREETYPE_CHANGE use mangled zlib symbol names */
 /*#include <zlib.h>*/
-#include <vtk_zlib.h>
+#include <zlib.h>
 
 #else /* !FT_CONFIG_OPTION_SYSTEM_ZLIB */
 

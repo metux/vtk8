@@ -58,22 +58,6 @@ set (HDF5_EXTERNALLY_CONFIGURED 1)
 set (HDF5_EXTERNAL_LIB_PREFIX "vtk")
 #   # Export configuration to this export variable
 set (HDF5_EXPORTED_TARGETS ${VTK_INSTALL_EXPORT_NAME})
-#
-#   # Setup all necessary overrides for zlib so that HDF5 uses our
-#   # internally compiled zlib rather than any other version
-if (HDF5_ENABLE_Z_LIB_SUPPORT)
-# We must tell the main HDF5 library that it depends on our zlib
-set (HDF5_LIB_DEPENDENCIES vtkzlib)
-# Override the zlib header file
-if (VTK_USE_SYSTEM_ZLIB)
-  set (H5_ZLIB_HEADER "zlib.h")
-else (VTK_USE_SYSTEM_ZLIB)
-  set (H5_ZLIB_HEADER "vtk_zlib.h")
-  # Set vars that FindZlib would have set if used in sub project
-  set (ZLIB_INCLUDE_DIRS "${VTK_ZLIB_INCLUDE_DIRS}")
-  set (ZLIB_LIBRARIES vtkzlib)
-endif (VTK_USE_SYSTEM_ZLIB)
-endif (HDF5_ENABLE_Z_LIB_SUPPORT)
 
 #   # Add the sub project
 #   add_subdirectory (Utilities/hdf5-1.8)

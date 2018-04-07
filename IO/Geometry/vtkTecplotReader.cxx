@@ -47,7 +47,7 @@
 #include "vtkUnsignedCharArray.h"
 #include "vtkDataArraySelection.h"
 
-#include "vtk_zlib.h"
+#include <zlib.h>
 #include <vtksys/SystemTools.hxx>
 
 #include <fstream>

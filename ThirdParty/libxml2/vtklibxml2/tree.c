@@ -21,7 +21,7 @@
 #ifdef HAVE_STDLIB_H
 #include <stdlib.h>
 #endif
-#include "vtk_libxml2_zlib.h"
+#include <zlib.h>
 
 #include <libxml/xmlmemory.h>
 #include <libxml/tree.h>

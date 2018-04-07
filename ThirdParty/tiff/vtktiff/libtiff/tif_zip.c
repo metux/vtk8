@@ -50,7 +50,7 @@
 /* XXX(kitware): Use the same zlib as VTK.
 #include "zlib.h"
 */
-#include "vtk_zlib.h"
+#include <zlib.h>
 
 #include <stdio.h>
 

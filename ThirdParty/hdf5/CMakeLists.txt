@@ -69,9 +69,8 @@ set(H5_LEGACY_NAMING ON CACHE INTERNAL "Use Legacy Names for Libraries and Progr
 # internally compiled zlib rather than any other version
 if(HDF5_ENABLE_Z_LIB_SUPPORT)
   # We must tell the main HDF5 library that it depends on our zlib
-  set(ZLIB_INCLUDE_DIRS "${vtkzlib_INCLUDE_DIRS}")
-  set(ZLIB_LIBRARIES "${vtkzlib_LIBRARIES}")
-  set(H5_ZLIB_HEADER "vtk_zlib.h")
+  set(ZLIB_INCLUDE_DIRS "${ZLIB_INCLUDE_DIRS}")
+  set(ZLIB_LIBRARIES "${ZLIB_LIBRARIES}")
 endif()
 
 # Ensure that the proper headers are included. Without this, static MSVC builds

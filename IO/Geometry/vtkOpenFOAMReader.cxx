@@ -60,7 +60,7 @@
 #include "vtksys/SystemTools.hxx"
 #include "vtksys/RegularExpression.hxx"
 #include <sstream>
-#include "vtk_zlib.h"
+#include <zlib.h>
 
 #include "vtkAssume.h"
 #include "vtkCellArray.h"

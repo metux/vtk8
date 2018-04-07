@@ -21,5 +21,4 @@ vtk_module(vtkIOGeometry
     vtkCommonSystem
     vtkCommonTransforms
     vtksys
-    vtkzlib
   )

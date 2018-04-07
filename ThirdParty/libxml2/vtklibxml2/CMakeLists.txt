@@ -45,7 +45,7 @@ CHECK_LIBRARY_EXISTS_CONCAT("dld"      shl_load       HAVE_SHLLOAD)
 
 #CHECK_LIBRARY_EXISTS_CONCAT("history"  append_history HAVE_LIBHISTORY)
 #CHECK_LIBRARY_EXISTS_CONCAT("readline" readline       HAVE_LIBREADLINE)
-IF(NOT vtkzlib_LIBRARIES)
+IF(NOT ZLIB_LIBRARIES)
   CHECK_LIBRARY_EXISTS_CONCAT("z"      inflateEnd     HAVE_LIBZ)
 ENDIF()
 
@@ -63,9 +63,9 @@ SET(CMAKE_REQUIRED_LIBRARIES ${LIBXML2_LIBS})
 SET(CMAKE_REQUIRED_DEFINITIONS "-D_GNU_SOURCE")
 
 # Use VTK's zlib if we are building in the tree.
-IF(vtkzlib_LIBRARIES)
+IF(ZLIB_LIBRARIES)
   SET(HAVE_LIBZ 1)
-  SET(LIBXML2_LIBS ${vtkzlib_LIBRARIES} ${LIBXML2_LIBS})
+  SET(LIBXML2_LIBS ${ZLIB_LIBRARIES} ${LIBXML2_LIBS})
 ENDIF()
 
 # Check if header file exists and add it to the list.
@@ -151,7 +151,7 @@ LIBXML2_PLATFORM_C_TEST(HAVE___VA_COPY   "Checking for __va_copy" DIRECT)
 LIBXML2_PLATFORM_C_TEST(SUPPORT_IP6      "Checking for ipv6 support." DIRECT)
 
 # Use VTK's zlib if we are building in the tree.
-IF(vtkzlib_LIBRARIES)
+IF(ZLIB_LIBRARIES)
   SET(HAVE_VTK_ZLIB_H 1)
   SET(HAVE_ZLIB_H 1)
 ELSE()
