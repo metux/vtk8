@@ -55,3 +55,7 @@ set(vtk_module_vtkTextRenderer_override "vtkMathTextFreeTypeTextRenderer")
 vtk_object_factory_configure("${vtk_module_overrides}")
 
 vtk_module_library(${vtk-module} ${Module_SRCS})
+
+target_link_libraries(${vtk-module} PUBLIC ${FREETYPE_LIBRARIES})
+target_include_directories(${vtk-module} PUBLIC ${FREETYPE_INCLUDE_DIRS})
+target_compile_options(${vtk-module} PUBLIC ${FREETYPE_CFLAGS})

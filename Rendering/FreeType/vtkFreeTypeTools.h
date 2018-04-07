@@ -40,7 +40,7 @@ class vtkTextProperty;
 class vtkStdString;
 
 // FreeType
-#include "vtk_freetype.h"  //since ft2build.h could be in the path
+#include <ft2build.h>  //since ft2build.h could be in the path
 #include FT_FREETYPE_H
 #include FT_GLYPH_H
 #include FT_CACHE_H

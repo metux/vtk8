@@ -21,7 +21,6 @@ vtk_module(vtkRenderingFreeType
     vtkCommonCore
     vtkCommonExecutionModel
     vtkRenderingCore
-    vtkfreetype
   PRIVATE_DEPENDS
     vtkCommonDataModel
     vtkFiltersGeneral
