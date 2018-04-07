@@ -407,6 +407,7 @@ SET(VTK_HAS_EXODUS 1)
 # detect libraries via pkg-config
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(ZLIB REQUIRED zlib)
+pkg_check_modules(LZ4 REQUIRED liblz4)
 
 #-----------------------------------------------------------------------------
 # Configure files with settings for use by the build.

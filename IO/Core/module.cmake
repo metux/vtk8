@@ -11,6 +11,5 @@ vtk_module(vtkIOCore
   PRIVATE_DEPENDS
     vtkCommonDataModel
     vtkCommonMisc
-    vtklz4
     vtksys
   )

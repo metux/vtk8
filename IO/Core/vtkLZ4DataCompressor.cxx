@@ -12,9 +12,10 @@
      PURPOSE.  See the above copyright notice for more information.
 
 =========================================================================*/
+#include <lz4.h>
+
 #include "vtkLZ4DataCompressor.h"
 #include "vtkObjectFactory.h"
-#include "vtk_lz4.h"
 
 vtkStandardNewMacro(vtkLZ4DataCompressor);
 
