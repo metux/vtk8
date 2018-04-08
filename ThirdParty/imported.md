@@ -8,7 +8,6 @@
   * [jsoncpp](jsoncpp/update.sh)
   * [kwiml](../Utilities/KWIML/update.sh)
   * [kwsys](../Utilities/KWSys/update.sh)
-  * [libproj4](libproj4/update.sh)
   * [libharu](libharu/update.sh)
   * [metaio](../Utilities/MetaIO/update.sh)
   * [mpi4py](mpi4py/update.sh)
