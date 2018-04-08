@@ -23,6 +23,7 @@ endif()
 #  DEPENDS = Modules that will be publicly linked to this module
 #  PRIVATE_DEPENDS = Modules that will be privately linked to this module
 #  COMPILE_DEPENDS = Modules that are needed at compile time by this module
+#  EXTRA_LIBS  = libraries that this module will be linked against
 #  OPTIONAL_PYTHON_LINK = Optionally link the python library to this module
 #  TEST_DEPENDS = Modules that are needed by this modules testing executables
 #  DESCRIPTION = Free text description of the module
@@ -61,6 +62,7 @@ macro(vtk_module _name)
   set(${vtk-module-test}_DECLARED 1)
   set(${vtk-module}_DEPENDS "")
   set(${vtk-module}_COMPILE_DEPENDS "")
+  set(${vtk-module}_EXTRA_LIBS "")
   set(${vtk-module}_OPTIONAL_PYTHON_LINK 0)
   set(${vtk-module}_PRIVATE_DEPENDS "")
   set(${vtk-module-test}_DEPENDS "${vtk-module}")
@@ -77,7 +79,7 @@ macro(vtk_module _name)
   foreach(arg ${ARGN})
     # XXX: Adding a new keyword? Update Utilities/Maintenance/WhatModulesVTK.py
     # and Utilities/Maintenance/VisualizeModuleDependencies.py as well.
-    if("${arg}" MATCHES "^((|COMPILE_|PRIVATE_|TEST_|)DEPENDS|DESCRIPTION|TCL_NAME|IMPLEMENTS|BACKEND|DEFAULT|GROUPS|TEST_LABELS|KIT|LEGACY)$")
+    if("${arg}" MATCHES "^((|COMPILE_|PRIVATE_|TEST_|)DEPENDS|DESCRIPTION|TCL_NAME|IMPLEMENTS|BACKEND|DEFAULT|GROUPS|TEST_LABELS|KIT|LEGACY|EXTRA_LIBS)$")
       set(_doing "${arg}")
     elseif("${arg}" STREQUAL "EXCLUDE_FROM_ALL")
       set(_doing "")
@@ -97,12 +99,10 @@ macro(vtk_module _name)
     elseif("${arg}" STREQUAL "OPTIONAL_PYTHON_LINK")
       set(_doing "")
       set(${vtk-module}_OPTIONAL_PYTHON_LINK 1)
-    elseif("${arg}" MATCHES "^[A-Z][A-Z][A-Z]$" AND
-           NOT "${arg}" MATCHES "^(ON|OFF|MPI)$")
-      set(_doing "")
-      message(AUTHOR_WARNING "Unknown argument [${arg}]")
     elseif("${_doing}" STREQUAL "DEPENDS")
       list(APPEND ${vtk-module}_DEPENDS "${arg}")
+    elseif("${_doing}" STREQUAL "EXTRA_LIBS")
+      list(APPEND ${vtk-module}_EXTRA_LIBS "${arg}")
     elseif("${_doing}" STREQUAL "TEST_LABELS")
       list(APPEND ${vtk-module}_TEST_LABELS "${arg}")
     elseif("${_doing}" STREQUAL "TEST_DEPENDS")
@@ -230,6 +230,8 @@ macro(vtk_module_impl)
       list(REMOVE_DUPLICATES ${vtk-module}_LIBRARIES)
     endif()
   endif()
+
+  list(APPEND ${vtk-module}_LIBRARIES "${${vtk-module}_EXTRA_LIBS}")
 
   if(${vtk-module}_SYSTEM_INCLUDE_DIRS)
     include_directories(${${vtk-module}_SYSTEM_INCLUDE_DIRS})
