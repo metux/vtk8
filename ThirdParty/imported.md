@@ -9,7 +9,6 @@
   * [kwsys](../Utilities/KWSys/update.sh)
   * [libharu](libharu/update.sh)
   * [metaio](../Utilities/MetaIO/update.sh)
-  * [Twisted](Twisted/update.sh)
   * [txaio](txaio/update.sh)
   * [wslink](wslink/update.sh)
   * [xdmf3](xdmf3/update.sh)
