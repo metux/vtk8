@@ -12,4 +12,3 @@
   * [wslink](wslink/update.sh)
   * [xdmf3](xdmf3/update.sh)
   * [zfp](zfp/update.sh)
-  * [zope.interface](ZopeInterface/update.sh)
